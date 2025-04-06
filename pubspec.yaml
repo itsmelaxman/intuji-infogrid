@@ -1,0 +1,54 @@
+name: intuji_infogrid
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1 
+
+environment:
+  sdk: ^3.7.2
+
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Package dependencies.
+  cupertino_icons: ^1.0.8
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  # Assets
+  assets:
+    - assets/
+    - assets/images/
+    - assets/animation/
+    - assets/icons/
+    - assets/fonts/
+
+  # Fonts
+  fonts:
+    - family: Bilo
+      fonts:
+        - asset: assets/fonts/Bilo_Thin.otf
+          weight: 100
+        - asset: assets/fonts/Bilo_Light.otf
+          weight: 300
+        - asset: assets/fonts/Bilo_Regular.otf
+          weight: 400
+        - asset: assets/fonts/Bilo_Medium.otf
+          weight: 500
+        - asset: assets/fonts/Bilo_Bold.otf
+          weight: 700
+        - asset: assets/fonts/Bilo_ExtraBold.otf
+          weight: 800
+
