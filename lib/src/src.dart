@@ -1,4 +1,5 @@
 //* ---------------------------------------- GLOBAL SOURCE EXPORTS ---------------------------------------- *\\
+library;
 
 /// [Core]
 export 'core/core.dart';

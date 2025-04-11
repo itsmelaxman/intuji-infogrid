@@ -2,13 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:intuji_infogrid/environment.dart';
-
-import 'src/core/route/app_router.dart';
+import 'package:intuji_infogrid/src/src.dart';
+import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   HttpOverrides.global = MyHttpOverrides();
-  runApp(MyApp());
+  runApp(MultiProvider(providers: AppProvider.providers, child: const MyApp()));
 }
 
 class MyApp extends StatefulWidget {

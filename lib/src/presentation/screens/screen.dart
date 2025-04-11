@@ -17,6 +17,7 @@ export 'team/team_card.dart';
 
 /// [Product] Detail Screen
 export 'product/product_detail_screen.dart';
+export 'product/product_detail_card.dart';
 
 /// [Profile] Screen
 export 'profile/profile_screen.dart';
