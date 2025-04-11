@@ -1,0 +1,44 @@
+{
+    "status": true,
+    "message": "Dashboard data fetched successfully",
+    "data": {
+        "totalQuotes": {
+            "count": 89,
+            "changePercent": -5,
+            "value": 24789.20
+        },
+        "totalOrders": {
+            "count": 256,
+            "changePercent": 8.5,
+            "value": 3500000
+        },
+        "budget": {
+            "spent": 450000,
+            "remaining": 50000
+        },
+        "orderTracking": {
+            "orderId": "OLG-SH-1247896",
+            "from": "7 Avoca St, Yagoona NSW",
+            "to": "14-56 Cave Rd, Strathfield NSW",
+            "progress": "in_transit",
+            "path": [
+                {
+                    "lat": -33.9021,
+                    "lng": 151.0361
+                },
+                {
+                    "lat": -33.8851,
+                    "lng": 151.0759
+                }
+            ]
+        },
+        "recentProducts": [
+            {
+                "id": "prod_001",
+                "name": "Premium Ripstop Lightweight Long Sleeve Shirt",
+                "imageUrl": "assets/images/product1.png"
+            }
+        ]
+    },
+    "timestamp": "2025-04-11T10:05:00Z"
+}

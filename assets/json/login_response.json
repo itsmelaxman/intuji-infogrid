@@ -1,0 +1,12 @@
+{
+    "status": true,
+    "message": "Login successful",
+    "data": {
+        "userId": "user_001",
+        "email": "rodri@transdev.com",
+        "name": "James Rodriguez",
+        "token": "mock_auth_token_xyz123",
+        "rememberMe": true
+    },
+    "timestamp": "2025-04-11T10:00:00Z"
+}

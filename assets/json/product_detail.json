@@ -1,0 +1,40 @@
+{
+    "status": "success",
+    "message": "Product details fetched successfully.",
+    "data": {
+        "id": "prod-00123",
+        "name": "Premium Ripstop Lightweight Long Sleeve Shirt",
+        "description": "100% Cotton Ripstop Weave 145 GSM/100% Cotton Mesh",
+        "price": 32.56,
+        "currency": "USD",
+        "image_urls": [
+            "assets/images/product001_front.png",
+            "assets/images/product001_side.png",
+            "assets/images/product001_back.png"
+        ],
+        "colors": [
+            {
+                "name": "Orange/Black",
+                "hex": "#F68B1F/#1C1C1C"
+            },
+            {
+                "name": "Yellow/Black",
+                "hex": "#FFD700/#1C1C1C"
+            }
+        ],
+        "available_sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+        ],
+        "selected_size": "XL",
+        "budget_left": 500.0,
+        "last_requested_date": "2024-01-07",
+        "can_request_again": true
+    },
+    "timestamp": "2025-04-11T09:41:00Z"
+}
