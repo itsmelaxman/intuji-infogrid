@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:intuji_infogrid/environment.dart';
 
-import 'core/route/app_router.dart';
+import 'src/core/route/app_router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
