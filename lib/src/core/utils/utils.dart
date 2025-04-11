@@ -1,8 +1,14 @@
 //* --------------------------------------------- Global Utils --------------------------------------------- *//
 library;
 
+/// App [Initializer]
+export 'app_initializer.dart';
+
 /// Main [Utility]
 export 'utility.dart';
+
+/// [Validation] Utils
+export 'validator.dart';
 
 /// [Date] Utils
 export 'datetime_utility.dart';

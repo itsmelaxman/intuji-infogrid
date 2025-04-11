@@ -2,7 +2,10 @@ class Assets {
   //* ----------------------------------------------- Main or Branding ---------------------------------- //
   static String get logo => 'logo'.logoPng;
   static String get poweredByLogo => 'powered'.logoPng;
+  static String get bgPattern => 'bg_pattern'.png;
 
+  //* ----------------------------------------------- Json ---------------------------------- //
+  static String get loginJsonPath => 'login_response'.json;
   Assets._();
 }
 

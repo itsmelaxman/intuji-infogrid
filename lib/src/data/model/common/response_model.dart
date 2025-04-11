@@ -1,13 +1,34 @@
-class ResponseModel {
-  final bool _isSuccess;
-  final int _statusCode;
-  final String _message;
-  final String _responseJson;
-  ResponseModel(
-      this._isSuccess, this._message, this._statusCode, this._responseJson);
+import 'dart:convert';
 
-  String get message => _message;
-  String get responseJson => _responseJson;
-  int get statusCode => _statusCode;
-  bool get isSuccess => _isSuccess;
+ApiResponse apiResponseFromJson(String str) =>
+    ApiResponse.fromJson(json.decode(str));
+
+String apiResponseToJson(ApiResponse body) => json.encode(body.toJson());
+
+class ApiResponse {
+  final bool status;
+  final String message;
+  dynamic data;
+  final String? timestamp;
+
+  ApiResponse({
+    required this.status,
+    required this.message,
+    this.data,
+    this.timestamp,
+  });
+
+  factory ApiResponse.fromJson(Map<String, dynamic> json) => ApiResponse(
+    status: json["status"],
+    message: json["message"] ?? '',
+    data: json["data"],
+    timestamp: json["timestamp"],
+  );
+
+  Map<String, dynamic> toJson() => {
+    "status": status,
+    "message": message,
+    "data": data,
+    "timestamp": timestamp,
+  };
 }

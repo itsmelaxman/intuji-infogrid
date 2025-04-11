@@ -18,3 +18,6 @@ export 'shared_preference_helper.dart';
 
 /// App [Styles] Constants
 export 'app_styles.dart';
+
+/// App [Enums] Constants
+export 'app_enums.dart';
