@@ -15,3 +15,6 @@ export 'app_color.dart';
 
 /// [Shared] Preferences Constants
 export 'shared_preference_helper.dart';
+
+/// App [Styles] Constants
+export 'app_styles.dart';
