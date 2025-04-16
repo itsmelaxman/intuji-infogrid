@@ -1,4 +1,4 @@
-package com.example.intuji_infogrid
+package com.intuji.infogrid
 
 import io.flutter.embedding.android.FlutterActivity
 

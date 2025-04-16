@@ -4,7 +4,7 @@
     "data": {
         "totalQuotes": {
             "count": 89,
-            "changePercent": -5,
+            "changePercent": 5,
             "value": 24789.20
         },
         "totalOrders": {
@@ -36,7 +36,7 @@
             {
                 "id": "prod_001",
                 "name": "Premium Ripstop Lightweight Long Sleeve Shirt",
-                "imageUrl": "assets/images/product1.png"
+                "imageUrl": "assets/images/product/product1.png"
             }
         ]
     },

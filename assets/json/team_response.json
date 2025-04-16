@@ -6,43 +6,43 @@
             "name": "James Rodriguez",
             "role": "Sales Manager",
             "email": "jamesrodri@infogrid.com",
-            "avatar": "assets/images/avatar1.png"
+            "avatar": "assets/images/team/team1.png"
         },
         {
             "name": "Ronald Richards",
             "role": "Employee",
             "email": "RonaldR@infogrid.com",
-            "avatar": "assets/images/avatar2.png"
+            "avatar": "assets/images/team/team2.png"
         },
         {
             "name": "Jane Cooper",
             "role": "Sales Manager",
             "email": "Janec@infogrid.com",
-            "avatar": "assets/images/avatar3.png"
+            "avatar": "assets/images/team/team3.png"
         },
         {
             "name": "Theresa Webb",
             "role": "Marketing",
             "email": "Webbtheresa@infogrid.com",
-            "avatar": "assets/images/avatar4.png"
+            "avatar": "assets/images/team/team1.png"
         },
         {
             "name": "Ralph Edwards",
             "role": "Sales Manager",
             "email": "RalphEd@infogrid.com",
-            "avatar": "assets/images/avatar5.png"
+            "avatar": "assets/images/team/team4.png"
         },
         {
             "name": "Jenny Wilson",
             "role": "Marketing",
             "email": "jennywil@infogrid.com",
-            "avatar": "assets/images/avatar6.png"
+            "avatar": "assets/images/team/team1.png"
         },
         {
             "name": "Esther Howard",
             "role": "IT Manager",
             "email": "estherhd@infogrid.com",
-            "avatar": "assets/images/avatar7.png"
+            "avatar": "assets/images/team/team1.png"
         }
     ],
     "timestamp": "2025-04-11T10:10:00Z"

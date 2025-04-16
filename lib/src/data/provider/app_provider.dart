@@ -5,9 +5,6 @@ class AppProvider {
   /// [App] Provider Constructor
   AppProvider._();
 
-  /// [Menu] Provider
-  static final MenuProvider bottomNavProvider = MenuProvider();
-
   /// [Splash] Provider
   static final SplashProvider splashProvider = SplashProvider();
 
@@ -27,9 +24,6 @@ class AppProvider {
 
   /// [Global] Providers List
   static final List<ChangeNotifierProvider> providers = [
-    /// [Menu] Provider
-    ChangeNotifierProvider<MenuProvider>.value(value: bottomNavProvider),
-
     /// [Splash] Provider
     ChangeNotifierProvider<SplashProvider>.value(value: splashProvider),
 
@@ -50,7 +44,6 @@ class AppProvider {
   static void dispose() {
     splashProvider.dispose();
     loginProvider.dispose();
-    bottomNavProvider.dispose();
     homeProvider.dispose();
     productProvider.dispose();
     teamProvider.dispose();

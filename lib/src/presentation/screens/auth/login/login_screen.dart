@@ -13,6 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  bool isObscure = true;
 
   void _handleLogin(BuildContext context) async {
     if (_formKey.currentState?.validate() ?? false) {
@@ -28,6 +29,32 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(Assets.logo, height: 50.0, alignment: Alignment.center),
+            Container(
+              height: 6.0,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Color(0x0F000000),
+                    Color(0xCAFADF2F),
+                    Color(0x05000000),
+                  ],
+                  stops: [0.0, 0.5051, 1.0],
+                ),
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: AppColors.kBlack,
+      ),
       body: Stack(
         children: [
           Positioned.fill(
@@ -38,10 +65,8 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Consumer<LoginProvider>(
               builder: (context, loginProvider, child) {
                 return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Image.asset(Assets.logo),
-                    const SizedBox(height: 24.0),
                     const Text(
                       'Sign In',
                       style: TextStyle(
@@ -54,20 +79,18 @@ class _LoginScreenState extends State<LoginScreen> {
                       key: _formKey,
                       child: Column(
                         children: [
-                          CustomTextField(
-                            hintText: 'Email or Username',
+                          _buildInputField(
                             controller: emailController,
-                            validation:
-                                (value) => Validator.validateEmail(value),
+                            hintText: 'Email or Username',
                             keyboardType: TextInputType.emailAddress,
+                            validator: Validator.validateEmail,
                           ),
                           const SizedBox(height: 16.0),
-                          CustomTextField(
-                            hintText: 'Password',
+                          _buildInputField(
                             controller: passwordController,
-                            validation:
-                                (value) => Validator.validatePassword(value),
+                            hintText: 'Password',
                             isPassword: true,
+                            validator: Validator.validatePassword,
                           ),
                         ],
                       ),
@@ -76,21 +99,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     loginProvider.status == DataFetchStatus.loading
                         ? const CircularProgressIndicator()
                         : CustomMaterialButton(
-                          text: 'Sign In',
                           onPressed: () => _handleLogin(context),
+                          text: 'Sign In',
+                          elevation: 0.35,
                         ),
                     const SizedBox(height: 16.0),
-                    TextButton(
+                    CustomMaterialButton(
                       onPressed: () {},
-                      child: const Text('Forgot your password?'),
-                    ),
-                    const Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text('Powered by '),
-                        Image.asset(Assets.poweredByLogo, height: 20.0),
-                      ],
+                      text: 'Forgot Password?',
+                      color: AppColors.kWhite,
+                      elevation: 0.35,
                     ),
                   ],
                 );
@@ -98,6 +116,70 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        height: kToolbarHeight,
+        color: Colors.transparent,
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Powered by '),
+            Image.asset(Assets.poweredByLogo, height: 20.0),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildInputField({
+    required TextEditingController controller,
+    required String hintText,
+    required String? Function(String?) validator,
+    bool isPassword = false,
+    TextInputType keyboardType = TextInputType.text,
+  }) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: TextFormField(
+        controller: controller,
+        validator: validator,
+        keyboardType: keyboardType,
+        obscureText: isPassword ? isObscure : false,
+
+        decoration: InputDecoration(
+          hintText: hintText,
+          filled: true,
+
+          fillColor: AppColors.kWhite,
+          labelText: hintText,
+          suffix:
+              isPassword
+                  ? GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isObscure = !isObscure;
+                      });
+                    },
+
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 16.0),
+                      child: Text(
+                        isObscure ? 'SHOW' : 'HIDE',
+                        style: AppStyles.text16PxMedium,
+                      ),
+                    ),
+                  )
+                  : null,
+          contentPadding: const EdgeInsets.symmetric(
+            vertical: 12.0,
+            horizontal: 16.0,
+          ),
+          border: InputBorder.none,
+          enabledBorder: InputBorder.none,
+          focusedBorder: InputBorder.none,
+          floatingLabelBehavior: FloatingLabelBehavior.always,
+        ),
       ),
     );
   }

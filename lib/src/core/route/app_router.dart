@@ -19,8 +19,8 @@ class AppRouter {
   /// [Team] screen route
   static const String team = '/team';
 
-  /// [Profile] screen route
-  static const String profile = '/profile';
+  /// [More] screen route
+  static const String more = '/more';
 
   // Map for routes
   static Map<String, WidgetBuilder> routes = {
@@ -30,6 +30,6 @@ class AppRouter {
     dashboard: (context) => const DashboardScreen(),
     product: (context) => const ProductDetailScreen(),
     team: (context) => const TeamScreen(),
-    profile: (context) => const ProfileScreen(),
+    more: (context) => const MoreScreen(),
   };
 }

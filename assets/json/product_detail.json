@@ -1,5 +1,5 @@
 {
-    "status": "success",
+    "status": true,
     "message": "Product details fetched successfully.",
     "data": {
         "id": "prod-00123",
@@ -8,9 +8,9 @@
         "price": 32.56,
         "currency": "USD",
         "image_urls": [
-            "assets/images/product001_front.png",
-            "assets/images/product001_side.png",
-            "assets/images/product001_back.png"
+            "assets/images/product/product1.png",
+            "assets/images/product/product1.png",
+            "assets/images/product/product1.png"
         ],
         "colors": [
             {

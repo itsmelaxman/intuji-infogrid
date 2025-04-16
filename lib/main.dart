@@ -27,12 +27,21 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-
-    return MaterialApp(
-      title: Environment.appName,
-      debugShowCheckedModeBanner: Environment.showDebugBanner,
-      initialRoute: widget.isLoggedIn ? AppRouter.dashboard : AppRouter.splash,
-      routes: AppRouter.routes,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        ResponsiveConfig().init(
+          constraints,
+          MediaQuery.of(context).orientation,
+        );
+        return MaterialApp(
+          title: Environment.appName,
+          debugShowCheckedModeBanner: Environment.showDebugBanner,
+          theme: ThemeConfig.lightTheme,
+          initialRoute:
+              widget.isLoggedIn ? AppRouter.dashboard : AppRouter.splash,
+          routes: AppRouter.routes,
+        );
+      },
     );
   }
 }

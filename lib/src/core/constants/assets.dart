@@ -6,6 +6,23 @@ class Assets {
 
   //* ----------------------------------------------- Json ---------------------------------- //
   static String get loginJsonPath => 'login_response'.json;
+  static String get productDetailJsonPath => 'product_detail'.json;
+  static String get dashboardJsonPath => 'dashboard_response'.json;
+  static String get teamJsonPath => 'team_response'.json;
+
+  //* ----------------------------------------------- Icons ---------------------------------- //
+  // Bottom Navigation Bar Icons
+  static String get homeIcon => 'dashboard'.icon;
+  static String get orderIcon => 'order'.icon;
+  static String get teamIcon => 'team'.icon;
+  static String get moreIcon => 'more'.icon;
+
+  // Other Icons
+  static String get searchIcon => 'search'.icon;
+
+  // Map Icons
+  static String get mapImagePath => 'route_map'.png;
+
   Assets._();
 }
 

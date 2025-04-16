@@ -53,11 +53,13 @@ class LoginProvider extends ChangeNotifier {
     await _sharedPrefs.deleteSharedPref([
       SharedPreferenceHelper.userInfoKey,
       SharedPreferenceHelper.isLoggedInKey,
+      SharedPreferenceHelper.userTokenKey,
+      SharedPreferenceHelper.userEmailKey,
     ]);
     _user = null;
     _status = DataFetchStatus.initial;
     notifyListeners();
-
+    showCustomToaster('Logout successful!', isError: false);
     if (!context.mounted) return;
     Utility.navigate(context, AppRouter.splash);
   }

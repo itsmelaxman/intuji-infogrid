@@ -1,9 +1,6 @@
 //* --------------------------------------------- Global Utils --------------------------------------------- *//
 library;
 
-/// App [Initializer]
-export 'app_initializer.dart';
-
 /// Main [Utility]
 export 'utility.dart';
 
@@ -22,5 +19,5 @@ export 'dimensions.dart';
 /// [Method] Utils
 export 'method.dart';
 
-/// Widget [Config] Utils
-export 'widget.config.dart';
+/// [Miscellaneous] Utils
+export 'misc_utility.dart';
