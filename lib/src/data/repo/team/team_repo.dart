@@ -21,7 +21,7 @@ class TeamRepo {
         return ApiResponse(status: false, message: apiResponse.message);
       }
     } catch (e) {
-      return ApiResponse(status: false, message: "An error occurred: $e");
+      return ApiResponse(status: false, message: "Something went wrong! $e");
     }
   }
 }

@@ -22,9 +22,8 @@ class ProductRepo {
       } else {
         return ApiResponse(status: false, message: apiResponse.message);
       }
-    } catch (e, s) {
-      print('Error: $e, StackTrace: $s');
-      return ApiResponse(status: false, message: "An error occurred: $e");
+    } catch (e) {
+      return ApiResponse(status: false, message: "Something went wrong! $e");
     }
   }
 }
