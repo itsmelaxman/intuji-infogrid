@@ -6,7 +6,7 @@
         "name": "James Rodriguez",
         "email": "rodri@transdev.com",
         "profileImage": "assets/images/avatar1.png",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyXzAwMSIsImVtYWlsIjoicm9kcmlAdHJhbnNkZXYuY29tIiwibmFtZSI6IkphbWVzIFJvZHJpZ3VleiIsImlhdCI6MTc0NDM2ODAwMH0.4JH9h8x8k9J8k9J8k9J8k9J8k9J8k9J8k9J8"
+        "token": ""
     },
     "timestamp": "2025-04-11T10:00:00Z"
 }
